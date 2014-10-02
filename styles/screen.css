@@ -1,0 +1,140 @@
+/*doc
+---
+title: Base styles
+---
+ */
+
+body {
+    background-color: #5cffbd;
+}
+
+
+/*doc
+---
+title: Wrapper
+category: Layout
+---
+ */
+.wrapper {
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+
+/*doc
+---
+title: Button
+category: UI
+---
+*/
+.button {
+    background-color: #2096f4;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    margin: 0;
+    outline: none;
+    padding: 25px;
+}
+
+.button_arrowRight {
+    border-radius: 50%;
+}
+
+.button_arrowRight:after {
+    content: '\25b8';
+    font-size: 18px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*doc
+---
+title: Card
+category: Modules
+---
+ */
+.card {
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    position: relative;
+}
+
+.card-control {
+    bottom: 30px;
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+    z-index: 1;
+}
+
+
+/*doc
+---
+title: TV
+category: Modules
+---
+ */
+.tv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tv-channel {
+    background-color: #ffffff;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.tv-channel_on {
+    z-index: 1;
+}
+
+.mix-tv-channel_cool {
+    background-color: #00bcd4;
+}
+
+.mix-tv-channel_hot {
+    background-color: #ffee4d;
+}
+
+
+/*doc
+---
+title: Photo
+category: Modules
+---
+ */
+.photo {
+    background: #ffffff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: absolute;
+}
+
+.photo:nth-child(1) {
+    bottom: 40px;
+    left: 50px;
+    transform: rotate(-5deg);
+}
+
+.photo:nth-child(2) {
+    bottom: 10px;
+    left: 120px;
+}
+
+.photo:nth-child(3) {
+    bottom: -60px;
+    left: 230px;
+    transform: rotate(10deg);
+}

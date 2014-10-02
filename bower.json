@@ -1,0 +1,14 @@
+{
+  "name": "FrontEndFriday",
+  "version": "0.0.0",
+  "homepage": "https://github.com/banderso-n/FrontEndFriday",
+  "authors": [
+    "Brad Anderson <banderso@nerdery.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "requirejs": "~2.1.15",
+    "jquery": "~2.1.1",
+    "html5-reset": "~2.1.2"
+  }
+}

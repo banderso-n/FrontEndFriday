@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promises and Velocity</title>
+
+    <link rel="stylesheet" href="vendor/html5-reset/assets/css/reset.css" />
+    <link rel="stylesheet" href="styles/screen.css" />
+    <script src="vendor/requirejs/require.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="card" id="js-materialCarousel">
+        <ul class="tv">
+            <li class="js-materialCarousel-slide tv-channel tv-channel_on">
+                <div class="js-materialCarousel-photo photo">
+                    <img src="http://fillmurray.com/200/200" alt="" />
+                </div>
+            </li>
+            <li class="js-materialCarousel-slide tv-channel mix-tv-channel_cool">
+                <div class="js-materialCarousel-photo photo">
+                    <img src="http://fillmurray.com/200/200" alt="" />
+                </div>
+                <div class="js-materialCarousel-photo photo">
+                    <img src="http://fillmurray.com/200/300" alt="" />
+                </div>
+            </li>
+            <li class="js-materialCarousel-slide tv-channel mix-tv-channel_hot">
+                <div class="js-materialCarousel-photo photo">
+                    <img src="http://fillmurray.com/200/200" alt="" />
+                </div>
+                <div class="js-materialCarousel-photo photo">
+                    <img src="http://fillmurray.com/200/300" alt="" />
+                </div>
+                <div class="js-materialCarousel-photo photo">
+                    <img src="http://fillmurray.com/200/400" alt="" />
+                </div>
+            </li>
+        </ul>
+        <div class="card-control">
+            <button class="js-materialCarousel-advancer button button_arrowRight"></button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function () {
+
+    require.config({
+        baseUrl: 'scripts',
+
+        paths: {
+            'jquery': '../vendor/jquery/dist/jquery',
+            'velocity': '../vendor/velocity/velocity'
+        },
+
+        shim: {
+            'velocity': {
+                deps: ['jquery']
+            }
+        }
+    });
+
+    require(['main']);
+}());
+</script>
+
+</body>
+</html>
