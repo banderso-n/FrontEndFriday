@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accessible JS</title>
+    <style>
+
+.code {
+    background: black;
+    color: white;
+    font-family: monospace;
+    padding: 0 5px;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>Writing Accessible JS</h1>
+
+    <div>Skip to a section</div>
+    <ol>
+        <li><a href="#what-is-it">What is it?</a></li>
+        <li><a href="#when-should-you-use-this">When should you use this?</a></li>
+        <li><a href="#accordion">Accordion</a></li>
+        <li><a href="#tabs">Tabs</a></li>
+        <li><a href="#modal">Modal</a></li>
+        <li><a href="#carousel">Carousel</a></li>
+        <li><a href="#sources">Sources</a></li>
+    </ol>
+
+    <div id="what-is-it">
+        <h2>What is it?</h2>
+        <ul>
+            <li>Making sure your dynamic page components are usable with assistive technology (e.g. screen readers)</li>
+            <li>
+                Managing user focus
+                <ul>
+                    <li><span class="code">tabindex</span></li>
+                    <li><span class="code">element.focus()</span></li>
+                    <li>Use buttons</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="when-should-you-use-this">
+        <h2>When should you use this?</h2>
+        <h3>When it makes sense to</h3>
+        <ul>
+            <li>If you have the budget</li>
+            <li>If you expect your users will need it</li>
+        </ul>
+    </div>
+
+    <div id="accordion">
+        <h2>Accordion</h2>
+        <ol>
+            <li>Put an <span class="code">aria-expanded</span> attribute on the trigger.</li>
+            <li>Put an <span class="code">aria-hidden</span> attribute on the panel.</li>
+            <li>Put an <span class="code">id</span> on the panel and an <span class="code">aria-controls</span> attribute on the panel's trigger. The <span class="code">aria-controls</span> attribute should equal the <span class="code">id</span> of the panel.</li>
+            <li>When a panel is toggled, toggle <span class="code">aria-expanded</span> and <span class="code">aria-hidden</span> states.</li>
+        </ol>
+
+        <div>
+            <h3>Accordion example</h3>
+            <h4>Accordion Heading 1</h4>
+            <p>Lorem ipsum In proident occaecat fugiat velit aliqua Excepteur non ex ad.</p>
+            <h4>Accordion Heading 2</h4>
+            <p>Lorem ipsum In proident occaecat fugiat velit aliqua Excepteur non ex ad.</p>
+        </div>
+    </div>
+
+    <div id="tabs">
+        <h2>Tabs</h2>
+        <ol>
+            <li>Put a <span class="code">role="tablist"</span> attribute on the tabs container.</li>
+            <li>Put a <span class="code">role="tab"</span> attribute on each tab trigger.</li>
+            <li>Put a <span class="code">role="tabpanel"</span> attribute on each tab panel.</li>
+            <li>Put an <span class="code">id</span> on each trigger and an <span class="code">aria-labelledby</span> attribute on each panel. The <span class="code">aria-labelledby</span> attribute should match the <span class="code">id</span> of its trigger.</li>
+            <li>Select the current tab by adding an <span class="code">aria-selected</span> attribute to it.</li>
+            <li>Hide inactive panels from the screen reader by adding a <span class="code">aria-hidden</span> attribute to each.</li>
+        </ol>
+
+        <div>
+            <h3>Tabs example</h3>
+            <h4>Tab Heading 1</h4>
+            <h4>Tab Heading 2</h4>
+            <p>Lorem ipsum In proident occaecat fugiat velit aliqua Excepteur non ex ad.</p>
+            <p>Lorem ipsum In proident occaecat fugiat velit aliqua Excepteur non ex ad.</p>
+        </div>
+    </div>
+
+    <div id="modal">
+        <h2>Modal</h2>
+        <ol>
+            <li>When the modal opens, focus on it</li>
+            <li>When the modal closes, focus back on the previously focused element</li>
+            <li>While the modal is open, keep focus contained inside modal</li>
+        </ol>
+    </div>
+
+    <div id="carousel">
+        <h2>Carousel</h2>
+    </div>
+
+    <div id="sources">
+        <h2>Sources</h2>
+        <ul>
+            <li><a href="http://heydonworks.com/practical_aria_examples" target="_blank">http://heydonworks.com/practical_aria_examples</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/listbox" target="_blank">https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/listbox</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
