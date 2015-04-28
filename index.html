@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <h1>Writing Accessible JS</h1>
+    <h1>Accessible JS: A set of checklists for writing accessible JavaScript components demonstrated using quotes from the Fast and Furious franchise</h1>
 
     <div>Skip to a section</div>
     <ol>
@@ -47,7 +47,7 @@
         <h2>When should you use this?</h2>
         <h3>When it makes sense to</h3>
         <ul>
-            <li>If you have the budget</li>
+            <li>If you have the time/budget</li>
             <li>If you expect your users will need it</li>
         </ul>
     </div>
@@ -78,7 +78,7 @@
             <li>Put a <span class="code">role="tabpanel"</span> attribute on each tab panel.</li>
             <li>Put an <span class="code">id</span> on each trigger and an <span class="code">aria-labelledby</span> attribute on each panel. The <span class="code">aria-labelledby</span> attribute should match the <span class="code">id</span> of its trigger.</li>
             <li>Select the current tab by adding an <span class="code">aria-selected</span> attribute to it.</li>
-            <li>Hide inactive panels from the screen reader by adding a <span class="code">aria-hidden</span> attribute to each.</li>
+            <li>Hide inactive panels from the screen reader by adding an <span class="code">aria-hidden</span> attribute to each.</li>
         </ol>
 
         <div>
@@ -93,22 +93,39 @@
     <div id="modal">
         <h2>Modal</h2>
         <ol>
-            <li>When the modal opens, focus on it</li>
-            <li>When the modal closes, focus back on the previously focused element</li>
-            <li>While the modal is open, keep focus contained inside modal</li>
+            <li>Put a <span class="code">role="dialog"</span> attribute on the container element.</li>
+            <li>Put an <span class="code">aria-labelledby</span> attribute that matches the <span class="code">id</span> of the modal's heading element.</li>
+            <li>Optionally, if the dialog contains additional descriptive text besides the dialog title, this text can be associated with the dialog using the <span class="code">aria-describedby</span> attribute</li>
+            <li>When the modal opens, focus on its default focusable control (usually an "OK" button).</li>
+            <li>While the modal is open, keep focus contained inside modal.</li>
+            <li>When the modal closes, focus back on the previously focused element.</li>
         </ol>
+
+        <div>
+            <h3>Modal example</h3>
+            <button>Launch modal</button>
+        </div>
     </div>
 
     <div id="carousel">
         <h2>Carousel</h2>
+
+        <ol>
+            <li>Put a <span class="code">role="listbox"</span> attribute on the container element.</li>
+            <li>Put a <span class="code">role="option"</span> attribute and a unique <span class="code">id</span> on each of the slide elements</li>
+            <li>Put an <span class="code">aria-activedescendent</span> attribute on the container element and set it equal to the <span class="code">id</span> of the active slide.</li>
+            <li>Keep the <span class="code">aria-activedescendent</span> attribute up-to-date as the carousel's active slide changes.</li>
+            <li>Optionally, if you have previous and next buttons, it's probably best practice to give them each <span class="code">aria-controls</span> attributes and set them to the <span class="code">id</span> of the container element.</li> 
+        </ol>
     </div>
 
     <div id="sources">
         <h2>Sources</h2>
         <ul>
-            <li><a href="http://heydonworks.com/practical_aria_examples" target="_blank">http://heydonworks.com/practical_aria_examples</a></li>
+            <li><a href="http://heydonworks.com/practical_aria_examples" target="_blank">http://heydonworks.com/practical_aria_examples</a> (take with a grain of salt...)</li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/listbox" target="_blank">https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/listbox</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets</a></li>
         </ul>
     </div>
 
