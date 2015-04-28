@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <meta charset="UTF-8" />
     <title>Accessible JS</title>
-    <style>
 
-.code {
-    background: black;
-    color: white;
-    font-family: monospace;
-    padding: 0 5px;
-}
+    <link rel="stylesheet" href="screen.css" />
 
-    </style>
 </head>
 <body>
 
-    <h1>Accessible JS: A set of checklists for writing accessible JavaScript components demonstrated using quotes from the Fast and Furious franchise</h1>
+    <div class="hero">
+        <h1>
+            <span>Accessible JS:</span>
+            <span>A set of checklists for writing accessible JavaScript components demonstrated using quotes from the Fast and Furious franchise</span>
+        </h1>
+    </div>
 
     <div>Skip to a section</div>
     <ol>
@@ -63,10 +63,15 @@
 
         <div>
             <h3>Accordion example</h3>
-            <h4>Accordion Heading 1</h4>
-            <p>Lorem ipsum In proident occaecat fugiat velit aliqua Excepteur non ex ad.</p>
-            <h4>Accordion Heading 2</h4>
-            <p>Lorem ipsum In proident occaecat fugiat velit aliqua Excepteur non ex ad.</p>
+
+            <div data-view="Accordion">
+                <h4 data-accordion-role="trigger">Accordion Heading 1</h4>
+                <p data-accordion-role="panel">Lorem ipsum In proident occaecat fugiat velit aliqua Excepteur non ex ad.</p>
+            </div>
+            <div data-view="Accordion">
+                <h4 data-accordion-role="trigger">Accordion Heading 2</h4>
+                <p data-accordion-role="panel">Lorem ipsum In proident occaecat fugiat velit aliqua Excepteur non ex ad.</p>
+            </div>
         </div>
     </div>
 
